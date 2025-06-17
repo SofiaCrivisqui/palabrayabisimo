@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Relaciones y Transferencia | Blog Psicoanálisis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">← Volver</a>
+    </div>
+  </nav>
+
+  <header class="text-center text-black py-5" style="background-color: rgb(216, 216, 216); background-size: cover; background-position: center;">
+    <div class="container">
+      <h1>Relaciones y Transferencia</h1>
+      <p class="lead">Vínculos, afectos y repeticiones en la consulta y la vida cotidiana.</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="./recursos/relaciones.jpg" alt="Relaciones y transferencia" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2>¿Por qué siempre me pasa lo mismo en mis relaciones? ¿Por qué <span style="background-color: #fff176; padding: 0 4px; border-radius: 4px;">repito patrones</span>, incluso cuando me hacen mal?</h2>
+        <p>
+          La teoría de la transferencia —nacida en el psicoanálisis y ampliada hoy a múltiples espacios— nos ayuda a entenderlo: lo no resuelto tiende a repetirse.
+        </p>
+        <p>
+          Desde los vínculos familiares hasta las relaciones amorosas, proyectamos en otros roles, expectativas y heridas que no siempre les corresponden. Reconocer estos mecanismos no es culparse: <strong>es la oportunidad de asumir una mirada más consciente y transformadora sobre nuestros afectos</strong>. Este espacio abre preguntas incómodas pero necesarias para quienes desean dejar de repetir y empezar a construir lazos más libres y verdaderos.
+        </p>
+      </div>
+    </div>
+
+    <section class="mt-5 p-4 bg-light rounded">
+      <div class="row align-items-center">
+        <!-- Formulario -->
+        <div class="col-md-6">
+          <h3 class="mb-4">¿Cómo se manifiestan tus vínculos repetidos?</h3>
+
+          <p>¿Dónde reconocés más tus repeticiones afectivas?</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="repeticion" id="parejas">
+            <label class="form-check-label" for="parejas">En relaciones de pareja</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="repeticion" id="amistades">
+            <label class="form-check-label" for="amistades">Con amigos o amigas</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="repeticion" id="familia">
+            <label class="form-check-label" for="familia">Con figuras familiares</label>
+          </div>
+
+          <p class="mt-4">¿Cómo reaccionás ante el abandono o la distancia emocional?</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="reaccion" id="ansiedad">
+            <label class="form-check-label" for="ansiedad">Con ansiedad o necesidad excesiva</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="reaccion" id="retiro">
+            <label class="form-check-label" for="retiro">Me alejo antes de que me lastimen</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="reaccion" id="culpa">
+            <label class="form-check-label" for="culpa">Me culpo aunque no sea responsable</label>
+          </div>
+
+          <button class="btn btn-dark mt-3">Enviar</button>
+        </div>
+
+        <!-- Imagen secundaria -->
+        <div class="col-md-6 text-center">
+          <img src="./recursos/relaciones (2).jpg" alt="Transferencia emocional" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    <section class="my-5 p-4 rounded shadow" style="background-color: #fff9c4;">
+      <blockquote id="fraseTransferencia" class="h5 fst-italic text-center text-dark mb-0">
+        “Toda relación es también un espejo.”
+      </blockquote>
+    </section>
+
+    <script>
+      const frasesTransferencia = [
+        "“Toda relación es también un espejo.”",
+        "“Transferimos a otros los vínculos que no sanamos.”",
+        "“Reconocer una repetición es empezar a cambiarla.”"
+      ];
+      let i = 0;
+      setInterval(() => {
+        i = (i + 1) % frasesTransferencia.length;
+        document.getElementById("fraseTransferencia").innerText = frasesTransferencia[i];
+      }, 5000);
+    </script>
+
+    
+    <section class="mt-5 px-3">
+  <h4 class="mb-3">También te puede interesar...</h4>
+  <ul class="list-unstyled">
+    <li><a href="dolor-y-escucha.html" class="enlace-estetico">El Dolor y la Escucha</a></li>
+    <li><a href="angustia.html" class="enlace-estetico">Filosofía de la Angustia</a></li>
+   <li><a href="inconsciente.html"class="enlace-estetico">Inconsciente y Deseo</a></li>
+  </ul>
+</section>
+
+    <section class="mt-5 px-3">
+      <h4 class="text-xl font-semibold mb-4">Miralo en acción</h4>
+       <div class="d-flex justify-content-center">
+       <div class="ratio ratio-16x9" style="max-width: 700px; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/9cTce2sI1GA" title="Transferencia y vínculos - Gabriel Rolón" allowfullscreen></iframe>
+      </div>
+      </div>
+     
+    </section>
+ 
+
+    <section class="mt-5 p-4 bg-light rounded">
+      <h5>¿Y ahora qué?</h5>
+      <p>
+        ✔ ¿A quién estás viendo cuando mirás a quien amás?<br>
+        ✔ ¿Tus reacciones actuales tienen raíces pasadas?<br>
+        ✔ ¿Qué vínculos estás listo para transformar?
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 Blog Psicoanálisis & Filosofía. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

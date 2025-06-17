@@ -1,0 +1,261 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.hero {
+  background: url('./recursos/7842967.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  transition: all 1s ease;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0,0,0,0.6);
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-overlay.hidden {
+  display: none;
+}
+
+.section-grid {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  padding: 6rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.section-grid.active {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  color: white;
+}
+
+.section-box {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.explore-btn {
+  margin-top: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.articles {
+  padding: 3rem 2rem;
+}
+
+/* Aplica Flexbox al contenedor de las columnas */
+.articles .row {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que las columnas pasen a la siguiente fila en pantallas pequeñas */
+  align-items: stretch; /* ¡CLAVE! Hace que las columnas (y, por lo tanto, las tarjetas dentro) se estiren a la altura de la más alta */
+}
+
+.article-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-align: left;
+   margin-top: 0;
+  margin-bottom: 0.75rem; /* Le damos un poco más de margen inferior al título */
+
+  /* Nuevo: Flexbox para el contenido interno de la tarjeta */
+  display: flex;
+  flex-direction: column; /* Organiza el contenido principal y la reseña en una columna */
+  height: 100%; /* ¡CLAVE! Hace que la tarjeta ocupe el 100% de la altura de su columna padre estirada */
+}
+
+.article-item img {
+  width: 100px;
+  height: auto; /* Mantén la proporción de la imagen */
+  float: left; /* Mantenemos el float aquí según tu código original */
+  margin-right: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Contenedor para el texto principal (h5 y p) que sigue a la imagen flotante */
+/* Este es un contenedor que "envuelve" el contenido principal para que Flexbox pueda gestionarlo */
+.article-item-body {
+  /* Usamos overflow para "limpiar" el float de la imagen dentro de este contexto */
+  overflow: hidden;
+  display: flex; /* Aplica flexbox a este contenedor también */
+  flex-direction: column; /* Organiza el h5 y el p en columna */
+  flex-grow: 1; /* Permite que este cuerpo crezca y empuje la reseña hacia abajo */
+  margin-bottom: 1rem; /* Espacio antes de la reseña, si no está activa */
+}
+
+.article-item h5 {
+  margin-top: 0; /* Elimina el margen superior predeterminado que puede causar problemas */
+  margin-bottom: 0.5rem;
+}
+
+.article-item p {
+  /* Permitimos que el párrafo crezca para rellenar el espacio si es necesario */
+  flex-grow: 1;
+  margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo */
+ 
+}
+
+.resena {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  margin-top: auto; /* ¡CLAVE! Empuja la reseña al final de la tarjeta, alineando las bases */
+  font-style: italic;
+  color: #555;
+  border-top: 1px dashed #eee; /* Añade una línea divisoria */
+  padding-top: 1rem; /* Espacio después de la línea divisoria */
+}
+
+.resena.open {
+  max-height: 200px; /* Ajusta este valor si tus reseñas son más largas */
+  opacity: 1;
+  margin-top: 1rem; /* Asegura un margen superior cuando está abierta */
+}
+
+.resena.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+.detail-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.detail-section h2 {
+  font-weight: bold;
+}
+.detail-section ul {
+  padding-left: 1.5rem;
+}
+
+
+.frase-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.article-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.article-item:hover img {
+  transform: scale(1.03);
+}
+
+.enlace-estetico {
+  color: #212529; /* Gris oscuro Bootstrap */
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.enlace-estetico:hover {
+  color: #dc7c40; /* Naranja sutil como el usado en otros elementos */
+  border-bottom: 1px solid #dc7c40;
+}
+
+
+/* ----------------------------- */
+/* 📱 Media Queries para Mobile  */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .section-grid {
+    position: static;
+    height: auto;
+    padding: 2rem 1rem;
+    display: none; /* siempre oculto hasta que tenga active */
+  }
+
+  .section-grid.active {
+    display: block;
+  }
+
+  .section-box {
+    margin-bottom: 2rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .hero {
+    /* Puedes ajustar el tamaño de la imagen para que se adapte mejor */
+    /*background-size: contain; /* O 'cover' si prefieres que cubra todo el espacio sin importar el recorte */
+   /* background-position: top center; /* Ajusta la posición si 'center' no funciona bien en móviles */
+    /* Si tienes una imagen específica para móvil, puedes cambiarla aquí */
+   background-image: url('./recursos/celu.png'); 
+  }
+}

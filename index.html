@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Psicoanálisis & Filosofía</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Palabra y Abismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#articulos">Artículos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay" id="heroOverlay">
+      <h1>Psicoanálisis & Filosofía</h1>
+      <p>Explora el alma humana desde la palabra y el pensamiento</p>
+      <button class="btn btn-light mt-3" onclick="mostrarSecciones()">Explorar Secciones</button>
+    </div>
+    <section class="section-grid" id="secciones">
+      <button class="close-btn" onclick="cerrarSecciones()">&times;</button>
+      <div class="section-box">
+        <h4>Inconsciente y Deseo</h4>
+        <p>Reflexiones sobre los mecanismos psíquicos ocultos que rigen nuestras decisiones.</p>
+        <a href="inconsciente.html" class="btn btn-outline-light explore-btn">Leer más</a>
+      </div>
+      <div class="section-box">
+        <h4>El Dolor y la Escucha</h4>
+        <p>El papel de la palabra y el silencio en el alivio del sufrimiento humano.</p>
+        <a href="dolor.html" class="btn btn-outline-light explore-btn">Leer más</a>
+      </div>
+      <div class="section-box">
+  <h4>Filosofía de la Angustia</h4>
+  <p>Un enfoque existencial de los vacíos interiores y la libertad.</p>
+  <a href="angustia.html" class="btn btn-outline-light explore-btn">Leer más</a>
+</div>
+
+
+      <div class="section-box">
+        <h4>Relaciones y Transferencia</h4>
+        <p>Vínculos, afectos y repeticiones en la consulta y la vida cotidiana.</p>
+       <a href="transferencia.html" class="btn btn-outline-light explore-btn">Leer más</a>
+      </div>
+    </section>
+  </header>
+  
+
+ <!-- Artículos -->
+<section class="articles container" id="articulos">
+  <h2 class="mb-4">Lecturas Recomendadas</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="article-item" onclick="toggleResena(this)">
+        <img src="./recursos/luciano.png" alt="Más crianza, menos terapia">
+        <h5>"Más crianza, menos terapia" – Luciano Lutereau</h5>
+        <p>Una mirada psicoanalítica fresca sobre los vínculos familiares y la crianza.</p>
+        <div class="resena">Lutereau propone una forma más humana y realista de acompañar a los hijos, lejos de las idealizaciones y más cerca de la experiencia emocional cotidiana.</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="article-item" onclick="toggleResena(this)">
+        <img src="./recursos/santiago2.png" alt="Guía para sobrevivir al presente">
+        <h5>"Guía para sobrevivir al presente" – Santiago Bilinkis</h5>
+        <p>Reflexiones urgentes sobre tecnología, ansiedad y el sentido de vivir hoy.</p>
+        <div class="resena">Bilinkis mezcla ciencia, filosofía y experiencia personal para ayudarnos a entender el impacto de la hiperconectividad en nuestra psique.</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="article-item" onclick="toggleResena(this)">
+        <img src="./recursos/Elamoresimposible_fte_720x.webp" alt="El amor es imposible">
+        <h5>"El amor es imposible" – Darío Sztajnszrajber</h5>
+        <p>Una desconstrucción filosófica del amor desde la mirada contemporánea.</p>
+        <div class="resena">Con su estilo directo y poético, Darío explora el deseo, la falta y las contradicciones del amor, lejos del ideal romántico y cerca de nuestra fragilidad.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <p>&copy; 2025 Blog Psicoanálisis & Filosofía. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:contacto@rolonblog.com">contacto@rolonblog.com</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
